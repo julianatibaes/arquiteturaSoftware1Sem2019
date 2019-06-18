@@ -1,0 +1,41 @@
+<!-- <h1 class="tile">Projeto</h1> -->
+
+<h2> {{ project.title }}</h2>
+<!-- <button (click)="firstClick()">Clique</button> -->
+<form class="form"  method="post" (ngSubmit)="onSubmit()" [formGroup]="projectForm">
+  
+ <!--<h5 *ngIf="success"> Falta dado amigo! Veja ai brow.</h5>--> 
+
+  <mat-form-field>
+    <input matInput placeholder="Nome do projeto" value="{{ project.title }}" formControlName="title">
+    <!--<div *ngIf="submitted && projectForm.controls.title.errors" class = "error">
+      <div *ngIf="projectForm.controls.title.errors.required">Item obrigatório amigo.</div>
+    </div>-->
+  </mat-form-field>
+
+  <mat-form-field class="gip-full-width">
+    <input matInput placeholder="Data de criação">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Líder do projeto">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Matrícula" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Área" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Programa">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Objetivo estratégico" >
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" (onClick)=salvar() class="form-item">Salvar</button>
+</form>

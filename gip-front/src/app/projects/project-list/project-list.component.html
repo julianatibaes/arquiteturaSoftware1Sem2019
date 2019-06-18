@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col s12">
+
+    <h2> Projetos </h2>
+
+    <button mat-raised-button color="accent" (click)="addProject()"> Novo Projeto</button>
+        
+    <table>
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Projeto</th>
+        <th>Líder</th>
+        <th>Início</th>
+        <th>Ação</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let project of projects">
+        <td class="hidden">{{project.id_project}}</td>
+        <td>{{project.title}}</td>
+        <td>{{project.owner.fullname}}</td>
+        <td>{{project.startProject}}</td>
+        <td><button mat-button color="primary" (click)="deleteProject(project)"> Excluir</button>
+          <button mat-button color="warn" routerLink="../project_detail/{{ project.id }}"> Editar</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<h1 class="title">Usuário</h1>
+
+<form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">  
+
+  <mat-form-field>
+    <input matInput placeholder="Nome completo" formControlName="fullname" >
+  </mat-form-field><br />
+
+  <mat-form-field>
+    <input matInput placeholder="Matrícula" type="number" formControlName="matriculation" >
+  </mat-form-field><br />
+
+  <mat-label>Perfil</mat-label>
+  <select matInput formControlName="perfil"   >
+    <option value="COMMON">usuário</option>
+    <option value="ADMIN">administrador</option>
+    <option value="MASTER">gerente</option>
+  </select>
+
+  <mat-form-field>
+    <input matInput placeholder="E-mail" type="email" formControlName="username" >
+  </mat-form-field><br />
+
+  <mat-form-field>
+    <input matInput placeholder="Senha" type="password" formControlName="password">
+  </mat-form-field><br />
+
+  <button mat-raised-button color="accent" class="form-item">Salvar</button>
+</form>

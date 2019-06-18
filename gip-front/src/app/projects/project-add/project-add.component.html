@@ -1,0 +1,17 @@
+<h2> Cadastro de Projeto </h2>
+<form class="form"  method="post" (ngSubmit)="onSubmit()" [formGroup]="projectForm">
+  
+
+    <input matInput placeholder="Nome do projeto" formControlName="title" formControlName="title">
+
+    <input matInput placeholder="Data de criação"  type="date"  formControlName="startProject">
+
+ 
+    <mat-label>Líder</mat-label>
+    <select matInput placeholder="Líder do projeto" formControlName="owner" required>
+      <option *ngFor="let user of users" [value]="user"> {{user.fullname}}</option>
+    </select>
+
+
+  <button mat-raised-button color="accent" (onClick)=salvar() class="form-item">Salvar</button>
+</form>

@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" >
+  <button mat-button routerLink="home">Home</button>
+
+  <button mat-button [matMenuTriggerFor]="projetoMenu">Projeto</button>
+  <mat-menu #projetoMenu="matMenu" yPosition="below">
+    <button mat-menu-item routerLink="project_add">Novo</button>
+    <button mat-menu-item routerLink="project_list">Ver projetos</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="usuarioMenu">Usuário</button>
+  <mat-menu #usuarioMenu="matMenu" xPosition="before">
+    <button mat-menu-item routerLink="user_add">Novo</button>
+    <button mat-menu-item routerLink="user_list">Ver usuários</button>
+  </mat-menu>
+</mat-toolbar>
+

@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col s12">
+
+  <h2> Usuários </h2>
+
+  <button mat-raised-button color="accent" (click)="addUser()"> Novo Usuário</button>
+      
+  <table>
+    <thead>
+    <tr>
+      <th class="hidden">Matrícula</th>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Ação</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td class="hidden">{{user.matriculation}}</td>
+      <td>{{user.fullname}}</td>
+      <td>{{user.username}}</td>
+      <td><button mat-button color="primary" (click)="deleteUser(user)"> Excluir</button>
+        <button mat-button color="warn" routerLink="../user_detail/{{ user.matriculation }}"> Editar</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
